@@ -1,0 +1,118 @@
+project_thinker_task:
+  description: >
+    Generate innovative ideas and analyze requirements for the user's website that requires {user_input}.
+    This involves brainstorming unique features, understanding user personas, identifying key functionalities,
+    and defining the project's scope to ensure a structured and impactful web application.
+
+  expected_output: >
+    - Requirement Document: A comprehensive document outlining key features, target users,
+      user flow, and key objectives.
+    - Feasibility Report: A detailed assessment of the project's viability, including potential
+      technical challenges, cost estimation, and proposed solutions.
+    - Wireframe Suggestions: Low-fidelity wireframes or sketches to visualize the website's structure.
+
+  agent: project_thinker
+
+project_architecture_task:
+  description: >
+    Develop a robust architecture and file structure for the project.
+    This includes outlining system components, designing the project hierarchy,
+    and defining the technology stack to ensure scalability, modularity, and efficiency.
+
+  expected_output: >
+    - Architecture Design Document: A well-structured document detailing the overall architecture,
+      including component interactions, data flow, database schema (if needed), and technology stack.
+    - Proposed File Structure: A detailed file structure specifying required directories, files,
+      and a brief explanation of their purpose.
+    - API Design (if applicable): Suggestion of API endpoints and data models for interaction.
+
+  agent: project_architecture
+
+code_developer_task:
+  description: >
+    Build high-quality, scalable, and reusable frontend components using React and Tailwind CSS.
+    Ensure the implementation follows design best practices, is mobile-responsive,
+    and includes accessibility standards for a smooth user experience.
+  focus_areas:
+    - Component Implementation: Develop fully functional and styled React components adhering to modern design principles.
+    - Component Documentation: Create a detailed guide for each component, outlining props, usage, and best practices.
+    - App.js Integration: Ensure that all components are correctly imported and integrated into the App.js file. Verify that the paths are accurate and the components are seamlessly integrated.
+    - Unit Tests: Write basic tests for core components to ensure functionality and reliability.
+  expected_output: >
+    - Implemented UI Components: Fully functional and styled React components.
+    - Component Documentation: A detailed guide for each component.
+    - Final App.js: A structured and optimized main application file that integrates components seamlessly.
+    - Unit Tests: Basic tests for core components.
+  agent: code_developer
+animator_task:
+  description: >
+    Enhance the website by adding high-quality animations using the framer-motion library.
+    Analyze key sections of the website that would benefit from animations to improve 
+    user experience and aesthetics.
+  focus_areas:
+    - Motion Design: Implement smooth and visually appealing animations for UI components.
+    - Performance Optimization: Ensure animations are optimized for performance and do not impact load times.
+    - Interactive Elements: Add engaging interactions to improve user engagement.
+    - Component Transitions: Implement seamless transitions between pages and sections.
+  expected_output: >
+    - Enhanced Website Aesthetics: Smooth and high-quality animations that improve UI/UX.
+    - Optimized Performance: Animations that are lightweight and efficient, ensuring smooth performance.
+    - Interactive UI: Improved user engagement with well-thought-out motion elements.
+    - Important: Correct format to use motion is 
+    <motion.h3 variants={item} className="text-xl font-bold mb-2">Skills</motion.h3>
+    Incorrect Format is 
+    <motion.h3 variants={item} className="text-xl font-bold mb-2">Skills</h3>
+    for every tags.
+  agent: animator
+background_editor_task:
+  description: >
+    Improve the website aesthetics by adding a high-quality dark background theme 
+    from https://bg.ibelick.com/ 
+    Black Background - <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%80%_at_50%-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+    Grid Black Background - <div class="relative h-full w-full bg-black"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div><div class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div></div>
+    Black Voilet Background - <div class="relative h-full w-full bg-slate-950"><div class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div><div class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div></div>
+    Apply any one of them.
+  focus_areas:
+    - Dark Theme Integration: Apply a professional dark-themed background for improved UI/UX.
+    - Custom Background Design: Create and implement a custom background if necessary.
+    - Performance Considerations: Ensure the background does not impact loading speed or usability.
+    - Compatibility: Ensure the background works well across different screen sizes and resolutions.
+  expected_output: >
+    - Enhanced Visual Appeal: A well-integrated dark theme that improves readability and aesthetics.
+    - Optimized Performance: A lightweight and efficiently loaded background.
+    - Responsive Design: Ensures the background looks good on all devices.
+  agent: background_editor
+
+code_improver_task:
+  description: >
+    Optimize and refine the existing React codebase to enhance performance, maintainability,
+    and scalability. This includes removing redundant code, improving efficiency,
+    and ensuring adherence to best practices.
+    focus_areas:
+      - Code Optimization: Adding more tailwind css where is not enough.
+      - Performance Enhancements: Implement code restructuring, better state management, and lazy loading where applicable.
+      - App.js Review: Ensure that the App.js file is optimized and that all component imports are correct and efficient.
+  expected_output: >
+    - Optimized Codebase: Clean, well-structured, and efficient React components.
+  agent: code_improver
+
+
+
+command_writer_task:
+  description: >
+    Set up and configure the React project efficiently using the appropriate commands.
+    This includes initializing the project, installing dependencies, configuring build tools,
+    setting up a development server, and ensuring smooth development workflows.
+
+  expected_output: >
+    - Setup Steps:
+        - Step 1: Run `npx create-react-app mvr` to initialize the project.
+        - Step 2: Navigate to the project directory using `cd mvr`.
+        - Step 3: Install dependencies like Tailwind CSS, React Router, and other required libraries.
+        - Step 4: Set up ESLint and Prettier for code consistency.
+        - Step 5: Create a `.env` file for environment variables.
+        - Step 6: Configure the folder structure and add base configurations.
+        - Step 7: Run `npm start` to launch the development server and validate the setup.
+    - Setup Report: A brief summary of installed packages, configurations, and any issues encountered.
+
+  agent: command_writer
